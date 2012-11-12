@@ -8,6 +8,8 @@ double scaleFactor;
 int scaledWidth;
 int scaledHeight;
 
+int speed = 1;
+
 
 void setup() {
   size(displayWidth,displayHeight);
@@ -28,7 +30,7 @@ void draw() {
   image(img,0,imgPos               ,scaledWidth,scaledHeight);
   image(img,0,imgPos + scaledHeight,scaledWidth,scaledHeight);
   
- imgPos -= 1; 
+ imgPos -= speed; 
  imgPos = imgPos % scaledHeight;
 }
 
